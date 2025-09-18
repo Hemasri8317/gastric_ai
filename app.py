@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load trained model, scaler, and label encoder
-model = joblib.load('gastric_model.pkl')
+model = joblib.load('gastro_model.pkl')
 scaler = joblib.load('scaler.pkl')
 encoder = joblib.load('label_encoder.pkl')
 
