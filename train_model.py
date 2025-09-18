@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 import joblib
 
 # ============ Load Dataset ============
-df = pd.read_csv("DATA.csv")
+df = pd.read_csv("GASDETECT.csv")
 
 # Drop extra unnamed columns
 df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
@@ -34,7 +34,7 @@ model = LogisticRegression(max_iter=500)
 model.fit(X_train, Y_train)
 
 # Save model, encoder, and scaler
-joblib.dump(model, "gastric_model.pkl")
+joblib.dump(model, "gastro_model.pkl")
 joblib.dump(label_encoder, "label_encoder.pkl")
 joblib.dump(scaler, "scaler.pkl")
 
